@@ -5,17 +5,22 @@
 ## ⚙️Technology stack and tools
 
 
-1.   Programming language: Go (Golang)
+-   Programming language: Go (Golang)
 
-2.   API: Google Gemini API (gemini-2.5-flash model)
+-  API: Google Gemini API (`gemini-2.5-flash model`)
 
-3.   Communication method: Direct HTTP requests (REST)
+-   Communication method: Direct HTTP requests (REST)
 
-4.   Data format: JSON
+-   Data format: JSON
 
-5.   Go packages used: net/http, encoding/json, os, log
+-   Go packages used: `net/http`, `encoding/json`, `os`, `log`
 
-6.   Environment: Console (CLI) application (currently, UI will be added in the future)
+-   Environment: Console (CLI) application 
 
 
 ### 🔑 Key features and characteristics
+
+1. Stability and error handling
+- Reliable API error handling: HTTP status checks (`200 OK`, `404`, `503`, etc.) are included, ensuring correct programme termination in case of server or API key issues.
+- Panic protection: Array length checks (`Candidates`, `Parts`) are implemented before accessing index `[0]`, which completely eliminates the `panic error: runtime error: index out of range`.
+- Diagnostics: Parsing and outputting information from the `PromptFeedback` field to diagnose reasons why a response may be blocked (e.g., for security reasons).
