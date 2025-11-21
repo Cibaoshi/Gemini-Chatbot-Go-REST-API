@@ -24,3 +24,13 @@
 - Reliable API error handling: HTTP status checks (`200 OK`, `404`, `503`, etc.) are included, ensuring correct programme termination in case of server or API key issues.
 - Panic protection: Array length checks (`Candidates`, `Parts`) are implemented before accessing index `[0]`, which completely eliminates the `panic error: runtime error: index out of range`.
 - Diagnostics: Parsing and outputting information from the `PromptFeedback` field to diagnose reasons why a response may be blocked (e.g., for security reasons).
+
+2. Architecture and interaction
+- Direct REST integration: Use of the standard Go `net/http` package to independently form and send JSON requests, bypassing official SDKs.
+- Structured input/output: User queries are accepted via command line arguments (`os.Args`). The model's response is extracted from a complex JSON structure and displayed in plain text.
+- Key security: The API key is loaded from an environment variable (`GEMINI_API_KEY`), preventing its accidental publication in the source code. 
+
+
+#### ⚡Potential for expansion
+
+  The current CLI interface can be easily converted into a local web server using the net/http package to create a minimal web chat interface, or into a library for larger Go applications.’
