@@ -31,6 +31,6 @@
 - Key security: The API key is loaded from an environment variable (`GEMINI_API_KEY`), preventing its accidental publication in the source code. 
 
 
-#### 💻 interface
+# 💻 interface
 
 When hosted, it generates a simple HTML interface in a browser window.
