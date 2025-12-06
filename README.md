@@ -15,7 +15,7 @@
 
 -   Go packages used: `net/http`, `encoding/json`, `os`, `log`
 
--   Environment: Console (CLI) application 
+-   Environment: Console (CLI) application (UPD. added web interface)
 
 
 ### 🔑 Key features and characteristics
