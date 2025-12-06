@@ -18,7 +18,7 @@
 -   Environment: Console (CLI) application (UPD. added web interface)
 
 
-### 🔑 Key features and characteristics
+# 🔑 Key features and characteristics
 
 1. Stability and error handling
 - Reliable API error handling: HTTP status checks (`200 OK`, `404`, `503`, etc.) are included, ensuring correct programme termination in case of server or API key issues.
