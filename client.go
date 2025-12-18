@@ -9,7 +9,7 @@ import (
 )
 
 func sendToGemini(prompt, apiKey string) (string, error) {
-	url := "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + apiKey
+	url := "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + apiKey
 
 	reqBody := GeminiRequest{
 		Contents: []struct {
@@ -61,3 +61,4 @@ func sendToGemini(prompt, apiKey string) (string, error) {
 
 	return result.Candidates[0].Content.Parts[0].Text, nil
 }
+
